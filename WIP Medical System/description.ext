@@ -1,0 +1,78 @@
+class RscTitles
+{
+	class PainFlash
+	{    
+		idd = -1;
+		duration = 0;
+		fadein = 0;
+		fadeout = 1;
+		class controls
+		{
+			class RedScreen
+			{    
+				idc = -1;
+				type = 0;
+				style = 48;
+				x = safeZoneXAbs;
+				y = safeZoneY;
+				w = safeZoneWAbs;
+				h = safeZoneH;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {1,0,0,0.75};
+				colorText[] = {"0.5 + random 0.5",0,0,0.75};
+				text = "cms\assets\whitevignette.paa";
+			};
+		};
+	};
+	class BleedWarn
+	{
+		idd = -2;
+		duration = 0;
+		fadein = 0;
+		fadeout = 1;
+		class controls
+		{
+			class RedSquare
+			{
+				idc = -1;
+				type = 0;
+				style = 48;
+				x = 0.40;
+				y = 0.75;
+				w = 0.2;
+				h = 0.2 * (4/3);
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {1,0,0,1};
+				colorText[] = {1,0,0,1};
+				text = "cms\assets\drop.paa";
+			};
+		};
+	};
+	class damageVignette
+	{
+		idd = 1;
+		duration = 1;
+		fadein = 0;
+		fadeout = 0;
+		class controls
+		{
+			class theActualVignette
+			{
+				idc = -1;
+				type = 0;
+				style = 48;
+				x = safeZoneXAbs;
+				y = safeZoneY;
+				w = safeZoneWAbs;
+				h = safeZoneH;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {1, 1, 1, "missionNamespace getVariable 'CUPMED_vignetteAlpha'"};
+				colorText[] = {1, 1, 1, "missionNamespace getVariable 'CUPMED_vignetteAlpha'"};
+				text = "cms\assets\vignette.paa";
+			};
+		};
+	};
+};

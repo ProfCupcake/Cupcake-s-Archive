@@ -1,0 +1,31 @@
+Put the 'scripts' folder in your mission folder. 
+
+--FOR THE ACTION VERSION:
+
+Pick an object, and put the following in the 'init' field: 
+
+this addAction ["Resupply", "scripts\resupplyAction.sqf", [5,1], 50, true, true, "", "vehicle _this isKindOf 'LandVehicle'"];
+
+Note that "scripts\resupply.sqf" can be changed to wherever you put the script, the two numbers in the array directly after that correspond to the maximum time it takes for each part of the resupply, and how much it will be resupplied to (e.g. a second value there of 0.5 will only resupply the vehicle to half its total values). 
+
+Also, if you use the exact code as above, it will only work for land vehicles. If you want it to work for air or sea vehicles, replace 'LandVehicle' with either 'Air' or 'Sea'. 
+
+
+--FOR THE TRIGGER VERSION: 
+
+Place a trigger, and set it up however you want it to be. Call the script with the following:
+
+nul = [unit to affect, time, amount] execVM "scripts\resupplyTrigger.sqf";
+
+Where 'unit to affect' is the player unit (NOT the vehicle itself), and 'time' and 'amount' correspond to the same time and amount values as above. 
+
+WARNING: This has only been tested in single-player, and will likely not work in multiplayer. I strongly recommend you use the action for multiplayer missions. 
+
+I would also recommend having something like this in the trigger's conditions:
+
+(vehicle (unit to affect) != (unit to affect))
+
+To make sure the unit actually has a vehicle to resupply. 
+
+
+Oh, and I forgot to mention that the time the resupply takes is scaled to how much is being resupplied. 

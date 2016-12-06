@@ -1,0 +1,27 @@
+TO INSTALL:
+
+Just copy the "scripts" folder into the mission folder, then either copy the init.sqf into your mission folder or, if your init.sqf already exists, copy the following line into it:
+
+[["blacklisted ground/sea vehicles"],["blacklisted helicopters"]] execVM "scripts\lift_init.sqf";
+
+If you wish to disallow certain vehicles to be lifted, you can put them in the first array there, marked "blacklisted ground/sea vehicles". 
+If you wish to disallow certain helicopters from lifting, you can put them in the second array, marked "blacklisted helicopters". 
+You can use either the classnames or the names of specific vehicles for the blacklists. 
+NOTE: If you use names set in the editor, enter it as a variable (not a string, so without the quotation marks). If it is a classname, enter it as a string (i.e. within quotation marks). 
+
+And that's it. 
+
+TO USE:
+
+It works via actions, which will pop up when available. 
+
+Prerequisites for lifting: 
+
+ - You are in a helicopter
+ - Your helicopter is not already carrying something
+ - You are the pilot
+ - You are travelling no more than 10 km/h
+ - There is a nearby ground/sea vehicle for you to lift (no more than 20 metres away)
+ - The helicopter you are in is not blacklisted
+
+There is no prerequisite for dropping vehicles other than that you are actually carrying a vehicle to drop. 

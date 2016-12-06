@@ -1,0 +1,5 @@
+- In reality, humans are easy to injure, but surprisingly hard to kill. The system should emulate this.
+- It should be simple on the frontend without compromising depth or gameplay. 
+- Each part of it must have a good reason for being there. No guff. 
+- Abstractions can, and inevitably will, be made for the sake of gameplay. 
+- Make sure that the Medikit is useful to the common soldier, but there are still worthy bonuses to being a proper medic. 
